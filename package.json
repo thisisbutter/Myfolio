@@ -1,0 +1,26 @@
+{
+  "name": "buttersLog",
+  "version": "1.0.0",
+  "description": "My first folio",
+  "author": "butter",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.9.7",
+    "@nuxtjs/markdownit": "^1.2.9",
+    "contentful": "^7.14.4",
+    "minimasonry": "^1.1.2",
+    "nuxt": "^2.0.0",
+    "nuxt-fontawesome": "^0.4.0",
+    "vue-magic-grid": "0.0.4",
+    "vue-masonry-wall": "^0.2.5"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.0.0"
+  }
+}
