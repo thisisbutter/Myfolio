@@ -3,14 +3,14 @@
     <v-content>
       <div class="nav_menu">
         <nav class="nav_list">
-          <nuxt-link to="/" class="navs">About</nuxt-link>
+          <nuxt-link to="/about" class="navs">About</nuxt-link>
           <nuxt-link to="/" class="navs">Blog</nuxt-link>
-          <nuxt-link to="/" class="navs">Works</nuxt-link>
+          <nuxt-link to="/" class="navs">Work</nuxt-link>
+          <nuxt-link to="/" class="navs">Home</nuxt-link>
         </nav>
 
       </div>
       <v-container>
-        <NavBar />
         <Logo />
         <nuxt />
       </v-container>
@@ -26,12 +26,16 @@
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue';
+
 import Logo from '@/components/Logo.vue';
+import blockQuote from '@/components/blockQuote.vue';
+// import Item from '@/components/Item.vue';
+
 export default {
   components: {
-    NavBar,
     Logo,
+    blockQuote,
+    // Item
   },
   data () {
     return {
@@ -58,30 +62,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.nav_list{
-  display: flex;
-  flex-direction: row-reverse;
-  height: 50px;
-  
-}
-.navs{
-  display: block;
-  padding: 40px 12px 0px;
-  color: black;
-  text-decoration: none;
-  font-size: 18px;
-}
-.navs:first-child{
-  margin-right: 140px;
-}
-
-.v-application a {
-  color: black;
-}
-.v-application :hover{
- color: goldenrod;
-}
-  
-</style>

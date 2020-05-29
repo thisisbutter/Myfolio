@@ -1,7 +1,7 @@
-// import Vue from "vue";
-// import MagicGrid from "vue-magic-grid";
+import Vue from "vue";
+import MagicGrid from "vue-magic-grid";
 
-// Vue.use(MagicGrid);
+Vue.use(MagicGrid);
 
 // let magicGrid = new MagicGrid({
 //     container: ".container", // Required. Can be a class, id, or an HTMLElement.

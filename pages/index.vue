@@ -1,72 +1,33 @@
 <template>
+<div class="container">
+  
+   <blockQuote />
 
-  <div class="container">
-          <v-card
+    <magic-grid>
+      <Item 
         v-for="work in works" 
         :key="work.sys.id"
-        class="mx-auto"
-        max-width="370"
-        min-height="260"
-          
-      >
-        <v-img
-          class="white--text align-end"
-          max-height="380px"
-          v-bind:src="work.fields.image.fields.file.url"
-          >
-        </v-img>
-
-        <v-card-title>{{ work.fields.title }}</v-card-title>
-        <v-card-subtitle class="pb-0">{{ work.fields.subtitle }}</v-card-subtitle>
-        
-        <li class="d-flex flex-row mb-6" >
-          <v-btn
-            v-for="tag in work.fields.tag" :key="tag.sys.id" 
-            text
-            color="primary"
-          >
-            {{ tag.fields.name }}
-          </v-btn>
-        </li>
-      </v-card>
-        <!-- </v-row>
-      </v-col>
-
-          <v-col
-            cols="3"
-            md="2"
-          >
-            
-          </v-col>
-        </v-row>
-  </v-container> -->
-  </div>
-
+        :work="work"
+      />
+    </magic-grid>
+ 
+ 
+ </div>
 </template>
 
 
-
 <script>
-  
+
+  import blockQuote from '@/components/blockQuote.vue';
+  import Item from '@/components/Item.vue';
   import { createClient } from '~/plugins/contentful.js'
-  import VueMasonryWall from "vue-masonry-wall";
-  // import MagicGrid from 'magic-grid'
- 
   const client = createClient()
 
-
-
     export default {
-      // name: 'app',
-      // components: {VueMasonryWall},
-      // data() {
-      //   return {
-      //     items: [
-      //       {title: 'Item 0', content: 'Content'},
-      //       {title: 'Item 1', content: 'Content'},
-      //     ]
-      //   }
-      // }, 
+      components: {
+        blockQuote,
+        Item
+      },
 
       asyncData() {
         return Promise.all([
@@ -79,50 +40,11 @@
           return {
             works: works.items // 取得したデータを配列worksに入れる
           }
+          console.log(works.items)
         }).catch(console.error)
       },
-      // mounted(){
-      //   const items = []
-      //   const options = {
-      //     width: 300,
-      //     padding: {
-      //       default: 12,
-      //       1: 6,
-      //       2: 8
-      //     }
-      //   }
- 
-        // const append = () => {
-        //   // API call and add items
-        //   this.items.push(...[])
-        // }
-      }
-    //   methods: {
-    //   append() {
-    //     for (let i = 0; i < 20; i++) {
-    //       this.items.push({title: `Item ${this.items.length}`, content: 'Content'})
-    //     }
-    //   }
-    // }
+    }
 
 </script>
 
 
-<style>
-  .v-card__title{
-    padding-top: 20px;
-    padding-bottom: 0;
-  }
-  li{
-    list-style: none;
-    width: auto
-  }
-  .v-application .pb-0{
-    margin-top: 8px;
-    min-height: 36px;
-  }
- .row{
-   align-items: baseline;
- }
-  
-</style>

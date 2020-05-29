@@ -25,8 +25,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+    },
     
-  },
+  
   /*
   ** Customize the progress-bar color
   */
@@ -36,25 +37,34 @@ export default {
   */
   css: [
   //   '@fortawesome/fontawesome-svg-core/styles.css'
+       '@/assets/css/styles.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {src: '~/plugins/magic-grid'}
+    {src: '~/plugins/magic-grid', ssr: false}
   ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
     '@nuxtjs/vuetify',
+    'nuxt-webfontloader'
   ],
+  webfontloader: {
+    google: {
+      families: ['Black Han Sans','Roboto','Lato']
+    }
+  },
   /*
   ** Nuxt.js modules
   */
   modules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/axios',
+    '@nuxtjs/markdownit'
+
     // 'nuxt-fontawesome'
   ],
   markdownit: { 
