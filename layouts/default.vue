@@ -3,9 +3,14 @@
     <v-content>
       <div class="nav_menu">
         <nav class="nav_list">
-          <nuxt-link to="/about" class="navs">About</nuxt-link>
-          <nuxt-link to="/" class="navs">Blog</nuxt-link>
-          <nuxt-link to="/" class="navs">Work</nuxt-link>
+          <v-text-field
+            label="Search"
+            v-model="keyword" 
+            @keypress.enter="$router.push('/search/' + keyword)"
+          ></v-text-field>
+          <nuxt-link to="/category/7GUtBQJAY7mwGUXhV7uWHF" class="navs">About</nuxt-link>
+          <nuxt-link to="/category/PaEXgNdpMzTwxXsEYjWHM" class="navs">Blog</nuxt-link>
+          <nuxt-link to="/category/Ae7gzW3aql6i1aNb6ls1w" class="navs">Work</nuxt-link>
           <nuxt-link to="/" class="navs">Home</nuxt-link>
         </nav>
 
@@ -15,13 +20,9 @@
         <nuxt />
       </v-container>
     </v-content>
+     
+     <Footer />
     
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
   </v-app>
 </template>
 
@@ -29,36 +30,72 @@
 
 import Logo from '@/components/Logo.vue';
 import blockQuote from '@/components/blockQuote.vue';
-// import Item from '@/components/Item.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   components: {
     Logo,
     blockQuote,
-    // Item
+    Footer
   },
-  data () {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Hey!.js'
-    }
-  }
+    data() {
+      return {
+        keyword: ''
+      }
+  },
+  
 }
 </script>
+
+<style>
+  .v-label {
+    font-size: 14px;
+  }
+  .v-input {
+    max-width: 10%;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  /* ナビゲーション */
+  .nav_list{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50px;
+    
+  }
+  .navs{
+    display: block;
+    padding: 40px 12px 0px;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .navs:first-child{
+    margin-right: 140px;
+  }
+  
+  .v-application a {
+    color: black;
+  }
+  .v-application a:hover{
+   color: goldenrod;
+  }
+  /* ========================
+/* ベーシックスタイル */
+/* ======================== */
+   div.container {
+   max-width: 1500px; 
+   margin-bottom: 100px;
+ }
+ 
+.v-application--wrap {
+  background-color: rgb(240, 236, 230);
+}
+.wrapper {
+  height: auto;
+} 
+/* 全体フォント */
+#app {
+  font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  } 
+</style>

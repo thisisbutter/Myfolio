@@ -4,6 +4,11 @@ import colors from 'vuetify/es5/util/colors'
 const config = require('./.contentful.json')
 const contentful = require('contentful')
 
+const client = contentful.createClient({
+  space: config.CTF_SPACE_ID,
+  accessToken: config.CTF_CDA_ACCESS_TOKEN
+}) 
+
 export default {
   mode: 'universal',
   /*
@@ -27,6 +32,27 @@ export default {
     ]
     },
     
+    generate: {
+      routes () {
+        return Promise.all([
+          client.getEntries({
+            'content_type': 'works'
+          }),
+          client.getEntries({
+            'content_type': 'category'
+          }),
+          client.getEntries({
+            'content_type': 'tag'
+          })
+        ]).then(([works,categories,tags]) => {
+          return [
+            ...works.items.map(works => `posts/${works.fields.slug}`),
+            ...categories.items.map(category => `category/${category.fields.slug}`),
+            ...tags.items.map(tag => `tag/${tag.sys.id}`)
+          ]
+        })
+      }
+    },
   
   /*
   ** Customize the progress-bar color
@@ -37,13 +63,15 @@ export default {
   */
   css: [
   //   '@fortawesome/fontawesome-svg-core/styles.css'
-       '@/assets/css/styles.css'
+       
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {src: '~/plugins/magic-grid', ssr: false}
+    {src: '~/plugins/magic-grid', ssr: false},
+    {src: '~/plugins/prism'},
+    { src: '~/plugins/infiniteloading', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -91,6 +119,7 @@ export default {
       themes: {
         dark: {
           primary: colors.blue.darken2,
+          // primary: '#CB8433',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,

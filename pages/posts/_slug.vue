@@ -3,20 +3,22 @@
     <div class="post-container">
         <div class="heading-titles">
           
-             <v-btn
-            v-for="tag in works.fields.tag" :key="tag.sys.id" 
-            text
-            color="primary"
-          >
-            {{ tag.fields.name }}
-          </v-btn>
-             <!-- <nuxt-link to="'/category/'+work.fields.category.sys.id"> -->
-            <!-- <v-btn
-            >
-            {{ works.fields.category.fields.name }}
-            </v-btn> -->
-        
-          <!-- </nuxt-link>  -->
+              <p class="bread_crum">/<nuxt-link to="/category/">
+                 Category  
+              </nuxt-link>/
+              <nuxt-link :to=" '/category/' + works.fields.category.sys.id ">
+                 {{ works.fields.category.fields.name }}
+              </nuxt-link>
+              </p>
+            
+               <v-btn
+                v-for="tag in works.fields.tag" :key="tag.sys.id" 
+                text
+                color="deep-orange lighten-2"
+                @click="$router.push('/tag/'+tag.sys.id)"
+              >
+                {{ tag.fields.name }}
+              </v-btn>
 
             <h1 class="single-post-title">{{  works.fields.title }}</h1>
             <h2 class="single-post-subtitle">{{ works.fields.subtitle }}</h2>
@@ -60,12 +62,28 @@ export default {
           }
           console.log(works.items[0])
         }).catch(console.error)
+      },
+      mounted() {
+        Prism.highlightAll()
       }
     
 }
 </script>>
 
 <style scoped>
+/* パンクずリスト */
+.bread_crum {
+  font-size: 17px;
+  /* color: #2f4f4f */
+}
+.bread_crum a {
+  text-decoration: none;
+  color: rgb(36, 92, 83);
+}
+.bread_crum a:hover {
+  color: darkgoldenrod
+}
+
 /* タイトルコンテナ */
 .post-container {
     margin-top: 60px;
@@ -112,4 +130,6 @@ export default {
     min-height: 300px;
     margin-bottom: 100px;
 }
+
+
 </style>>
