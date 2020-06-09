@@ -7,7 +7,9 @@
             label="Search"
             v-model="keyword" 
             @keypress.enter="$router.push('/search/' + keyword)"
-          ></v-text-field>
+            class="d-none d-lg-block"
+            >
+          </v-text-field>
           <nuxt-link to="/category/7GUtBQJAY7mwGUXhV7uWHF" class="navs">About</nuxt-link>
           <nuxt-link to="/category/PaEXgNdpMzTwxXsEYjWHM" class="navs">Blog</nuxt-link>
           <nuxt-link to="/category/Ae7gzW3aql6i1aNb6ls1w" class="navs">Work</nuxt-link>
@@ -75,7 +77,7 @@ export default {
   }
   
   .v-application a {
-    color: black;
+    color: black !important;
   }
   .v-application a:hover{
    color: goldenrod;
@@ -98,4 +100,10 @@ export default {
 #app {
   font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   } 
+/* 全体画像サイズ */
+img {
+  width:100%;
+  max-width: 100%;
+  height: auto;
+}
 </style>

@@ -1,5 +1,7 @@
 <template>
  <div>
+   <v-container>
+     <!-- <v-flex xs6 md6> -->
     <div class="post-container">
         <div class="heading-titles">
           
@@ -38,6 +40,8 @@
         </section>
 
     </div>
+     <!-- </v-flex> -->
+   </v-container>
  </div>
 </template>
 
@@ -64,9 +68,20 @@ export default {
         }).catch(console.error)
       },
       mounted() {
-        Prism.highlightAll()
-      }
-    
+        Prism.highlightAll(),
+        console.log(this.$vuetify.breakpoint)
+      },
+      computed: {
+      imageHeight () {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return '220px'
+          case 'sm': return '400px'
+          case 'md': return '500px'
+          case 'lg': return '600px'
+          case 'xl': return '800px'
+        }
+      }  
+    }
 }
 </script>>
 
@@ -125,11 +140,18 @@ export default {
 
 /* コンテンツ */
 .the-content {
-    width: 800px;
+    /* width: 800px; */
+    width: 90%;
     margin: 0 auto;
     min-height: 300px;
     margin-bottom: 100px;
 }
+@media screen and (min-width:1024px) {
+ .the-content {
+  width: 800px;
+ } 
+}
+
 
 
 </style>>
