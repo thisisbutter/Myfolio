@@ -140,15 +140,20 @@ export default {
 
 /* コンテンツ */
 .the-content {
-    /* width: 800px; */
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     min-height: 300px;
     margin-bottom: 100px;
 }
+
+@media screen and (min-width:800px) {
+  .the-content {
+  width: 80%;
+ } 
+}
 @media screen and (min-width:1024px) {
  .the-content {
-  width: 800px;
+  width: 720px;
  } 
 }
 
