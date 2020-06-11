@@ -77,9 +77,9 @@ export default {
   }
   
   .v-application a {
-    color: black !important;
+    color: black;
   }
-  .navs:hover{
+  .v-application a:hover{
    color: goldenrod;
   }
   /* ========================

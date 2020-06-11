@@ -31,7 +31,7 @@
   flex-direction: column;
 }
 #main_title {
-    font-family: 'Black Han Sans', sans-serif !important;
+    font-family: 'Black Han Sans', sans-serif;
     font-size: 46px;
     text-align: center;
     color: rgb(51, 34, 16);

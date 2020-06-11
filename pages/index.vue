@@ -1,6 +1,5 @@
 <template>
-<div class="container">
-
+<div>
     <magic-grid>
       <Item 
         v-for="work in works" 
@@ -14,7 +13,6 @@
       ref="infiniteLoading" 
       spinner="spiral"
       @infinite="infiniteHandler">
-      <div slot="no-results"/>
       <span slot="no-more"></span>
     </infinite-loading>
 
