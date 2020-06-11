@@ -71,14 +71,13 @@ export default {
   plugins: [
     {src: '~/plugins/magic-grid', ssr: false},
     {src: '~/plugins/prism', ssr: false},
-    // { src: '~/plugins/infiniteloading', ssr: false }
+    { src: '~/plugins/infiniteloading', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
     '@nuxtjs/vuetify',
-    'nuxt-webfontloader'
   ],
   webfontloader: {
     google: {
@@ -91,9 +90,8 @@ export default {
   modules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/axios',
-    '@nuxtjs/markdownit'
-
-    // 'nuxt-fontawesome'
+    '@nuxtjs/markdownit',
+    'nuxt-webfontloader'
   ],
   markdownit: { 
     html: true,
