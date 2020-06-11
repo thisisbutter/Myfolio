@@ -4,7 +4,7 @@
 
   <div class="title_container">
     <nuxt-link to="/">
-     <h1 id="main_title">Butters Log</h1>
+     <h1 id="main_title" class="display-2">Butters Log</h1>
     </nuxt-link>
      <h2 class="sub_title">Frontend Web Developer</h2>
 
@@ -32,7 +32,7 @@
 }
 #main_title {
     font-family: 'Black Han Sans', sans-serif;
-    font-size: 46px;
+    /* font-size: 46px; */
     text-align: center;
     color: rgb(51, 34, 16);
     margin-top: 100px;

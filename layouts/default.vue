@@ -77,7 +77,7 @@ export default {
   }
   
   .v-application a {
-    color: black;
+    /* color: black; */
   }
   .v-application a:hover{
    color: goldenrod;
