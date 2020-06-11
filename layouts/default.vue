@@ -79,7 +79,7 @@ export default {
   .v-application a {
     color: black !important;
   }
-  .v-application a:hover{
+  .navs:hover{
    color: goldenrod;
   }
   /* ========================
@@ -100,9 +100,9 @@ export default {
 #app {
   font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   } 
-#main_title {
+/* #main_title {
   font-family: 'Black Han Sans', sans-serif !important;
-}
+} */
 /* 全体画像サイズ */
 img {
   width:100%;

@@ -70,8 +70,8 @@ export default {
   */
   plugins: [
     {src: '~/plugins/magic-grid', ssr: false},
-    {src: '~/plugins/prism'},
-    { src: '~/plugins/infiniteloading', ssr: false }
+    {src: '~/plugins/prism', ssr: false},
+    // { src: '~/plugins/infiniteloading', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules

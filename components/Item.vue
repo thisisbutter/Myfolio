@@ -51,20 +51,9 @@ export default {
 
 <style scoped>
 .v-card {
- /* transition: all 5s ease !important;  */
  border-radius: 10px !important;
- /* position: relative;
- z-index: 1; */
 }
-.v-card .under-image-content-space a {
-  /* position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-indent:-999px;
-    z-index: 2; */
-}
+
 .v-card:hover {
  transform: scale(0.986, 0.986);
  transition: all .14s linear !important; 

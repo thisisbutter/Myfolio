@@ -12,15 +12,14 @@
     </magic-grid>
 
    <!-- infinite-loading -->
-     <infinite-loading 
+     <!-- <infinite-loading 
       ref="infiniteLoading" 
       spinner="spiral"
-      @infinite="infiniteHandler">
+      @infinite="infiniteHandler"> -->
       <!-- <div slot="no-results"/> -->
-      <span slot="no-more"></span>
-    </infinite-loading>
- 
- 
+      <!-- <span slot="no-more"></span>
+    </infinite-loading> -->
+
  </div>
 </template>
 
@@ -42,8 +41,8 @@
        methods: {
         infiniteHandler() {
          setTimeout(() => {
-          if(this.count < 100){
-          this.count += 20
+          if(this.count < 20){
+          this.count += 10
           this.$refs.infiniteLoading.stateChanger.loaded()
           } else {
           this.$refs.infiniteLoading.stateChanger.complete()
@@ -51,7 +50,6 @@
           }, 1000)
          }
     },
-      
       components: {
         blockQuote,
         Item
