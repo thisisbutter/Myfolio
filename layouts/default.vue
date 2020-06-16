@@ -18,12 +18,17 @@
 
       </div>
       <v-container>
-        <Logo />
-        <nuxt />
+       <v-row>
+        <v-col cols="12">
+          <Logo />
+          <nuxt />
+        </v-col>
+       </v-row>
       </v-container>
-    </v-content>
      
+    </v-content>
      <Footer />
+     
     
   </v-app>
 </template>
@@ -76,9 +81,7 @@ export default {
     margin-right: 140px;
   }
   
-  .v-application a {
-    /* color: black; */
-  }
+  
   .v-application a:hover{
    color: goldenrod;
   }

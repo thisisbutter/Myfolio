@@ -1,5 +1,6 @@
 <template>
-<div>
+
+ <div>
 
     <magic-grid>
       <Item 
@@ -20,6 +21,7 @@
     </infinite-loading>
 
  </div>
+
 </template>
 
 

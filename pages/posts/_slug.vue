@@ -1,4 +1,5 @@
 <template>
+
  <div>
    <v-container>
      <!-- <v-flex xs6 md6> -->
@@ -43,6 +44,7 @@
      <!-- </v-flex> -->
    </v-container>
  </div>
+
 </template>
 
 

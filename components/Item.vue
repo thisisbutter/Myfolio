@@ -43,7 +43,7 @@
       </v-card>
      </v-hover>
    
-  
+
 </template>
 
 <script>
