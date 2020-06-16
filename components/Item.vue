@@ -1,10 +1,17 @@
 <template>
-   
- 
+
+     <v-hover
+        v-slot:default="{ hover }"
+      > 
+
      <v-card
         class="mx-auto"
         min-width="360"
         min-height="260"
+        rounded
+        value="100"
+        :elevation="hover ? 16 : 2"
+    
           
       >
         <v-img
@@ -17,12 +24,7 @@
        <nuxt-link :to="'/posts/' + work.fields.slug">
         <v-card-title>{{ work.fields.title }}</v-card-title>
        </nuxt-link>
-          
-           <!-- <nuxt-link to="'/category/' + works.fields.category.sys.id">
-           <div>
-            {{ works.fields.category.fields.name }}
-           </div>
-          </nuxt-link>  -->
+         
           
         <v-card-subtitle class="pb-0">{{ work.fields.subtitle }}</v-card-subtitle>
         
@@ -39,6 +41,8 @@
         </li>
         </div>
       </v-card>
+     </v-hover>
+   
   
 </template>
 
@@ -50,21 +54,13 @@ export default {
 </script>
 
 <style scoped>
-.v-card {
- border-radius: 10px !important;
-}
 
-.v-card:hover {
+/* .v-card:hover {
  transform: scale(0.986, 0.986);
  transition: all .14s linear !important; 
 
-}
-.v-image {
-  cursor: pointer;
-}
-/* .v-image--cover:hover{
-    transform: scale(1.5);
-}  */
+} */
+
 .under-image-content-space {
     height: 150px;
 }

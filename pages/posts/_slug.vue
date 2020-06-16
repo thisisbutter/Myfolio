@@ -11,7 +11,7 @@
               <nuxt-link :to=" '/category/' + works.fields.category.sys.id ">
                  {{ works.fields.category.fields.name }}
               </nuxt-link>
-              </p>
+              <!-- <v-breadcrumbs :items="items"></v-breadcrumbs> -->
             
                <v-btn
                 v-for="tag in works.fields.tag" :key="tag.sys.id" 
@@ -53,6 +53,21 @@ const client = createClient()
 
 export default {
 
+      data: () => ({
+          items: [
+            {
+              text: 'HOME',
+              disabled: false,
+              href: '/',
+            },
+            // {
+            //   text: 'this.fields.category.fields.name',
+            //   disabled: false,
+            //   href: "'/category/' + this.fields.category.sys.id'"
+            // },
+          ],
+        }),
+
      asyncData({params}) {
         return Promise.all([
           client.getEntries({
@@ -86,18 +101,18 @@ export default {
 </script>>
 
 <style scoped>
-/* パンクずリスト */
+/* パンクずリスト
 .bread_crum {
   font-size: 17px;
   /* color: #2f4f4f */
-}
-.bread_crum a {
+/* } */
+/* .bread_crum a {
   text-decoration: none;
   color: rgb(36, 92, 83);
 }
 .bread_crum a:hover {
   color: darkgoldenrod
-}
+}  */
 
 /* タイトルコンテナ */
 .post-container {

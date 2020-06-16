@@ -1,12 +1,15 @@
 <template>
 <div>
+
     <magic-grid>
       <Item 
         v-for="work in works" 
         :key="work.sys.id"
         :work="work"
       />
+      
     </magic-grid>
+ 
 
    <!-- infinite-loading -->
      <infinite-loading 
