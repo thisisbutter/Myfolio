@@ -1,6 +1,8 @@
 <template>
   <div>
-   <magic-grid>
+   <magic-grid
+   maxColWidth=360
+   >
     <Item 
       v-for="work in works" 
       :key="work.sys.id"

@@ -1,8 +1,6 @@
 <template>
 
  <div>
-   <v-container>
-     <!-- <v-flex xs6 md6> -->
     <div class="post-container">
         <div class="heading-titles">
           
@@ -14,26 +12,27 @@
               </nuxt-link>
               <!-- <v-breadcrumbs :items="items"></v-breadcrumbs> -->
             
-               <v-btn
+               <button
                 v-for="tag in works.fields.tag" :key="tag.sys.id" 
                 text
                 color="deep-orange lighten-2"
                 @click="$router.push('/tag/'+tag.sys.id)"
               >
                 {{ tag.fields.name }}
-              </v-btn>
+               </button>
 
             <h1 class="single-post-title">{{  works.fields.title }}</h1>
             <h2 class="single-post-subtitle">{{ works.fields.subtitle }}</h2>
         </div>
 
-    <v-img 
+    <img 
     class="post-img"
-    max-height="540px"
     v-bind:src="works.fields.image.fields.file.url"
     >
+    
+    <!-- max-height="540px" -->
      
-    </v-img>
+   
 
         <section class="the-content">
             <p v-html="$md.render(works.fields.content)">
@@ -41,8 +40,6 @@
         </section>
 
     </div>
-     <!-- </v-flex> -->
-   </v-container>
  </div>
 
 </template>
@@ -84,21 +81,21 @@ export default {
           console.log(works.items[0])
         }).catch(console.error)
       },
-      mounted() {
-        Prism.highlightAll(),
-        console.log(this.$vuetify.breakpoint)
-      },
-      computed: {
-      imageHeight () {
-        switch (this.$vuetify.breakpoint.name) {
-          case 'xs': return '220px'
-          case 'sm': return '400px'
-          case 'md': return '500px'
-          case 'lg': return '600px'
-          case 'xl': return '800px'
-        }
-      }  
-    }
+    //   mounted() {
+    //     Prism.highlightAll(),
+    //     console.log(this.$vuetify.breakpoint)
+    //   },
+    //   computed: {
+    //   imageHeight () {
+    //     switch (this.$vuetify.breakpoint.name) {
+    //       case 'xs': return '220px'
+    //       case 'sm': return '400px'
+    //       case 'md': return '500px'
+    //       case 'lg': return '600px'
+    //       case 'xl': return '800px'
+    //     }
+    //   }  
+    // }
 }
 </script>>
 
@@ -135,7 +132,11 @@ export default {
 }
 .post-img {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
+    max-width: 980px;
+    max-height: 460px;
+    display: block;
+    
 }
 
 .v-responsive {

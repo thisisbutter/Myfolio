@@ -1,6 +1,5 @@
 <template>
  
- <!-- <v-img src="/bumble bee.png"></v-img> -->
 
   <div class="title_container">
     <nuxt-link to="/">
@@ -24,24 +23,26 @@
    text-decoration: none;
  }
 .title_container{
-  height: 420px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 #main_title {
     font-family: 'Black Han Sans', sans-serif;
-    /* font-size: 46px; */
+    font-size: 46px;
     text-align: center;
     color: rgb(51, 34, 16);
     margin-top: 100px;
+    margin-bottom: 0px;
   }
   .sub_title {
     font-size: 22px;
     font-weight: 200;
     text-align: center;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Lato', sans-serif; 
+    color: gray
   }
 
  .bee-img {

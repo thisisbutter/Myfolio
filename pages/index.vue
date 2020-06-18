@@ -2,7 +2,9 @@
 
  <div>
 
-    <magic-grid>
+    <magic-grid
+     maxColWidth= 360
+    >
       <Item 
         v-for="work in works" 
         :key="work.sys.id"
@@ -27,7 +29,6 @@
 
 <script>
 
-  import blockQuote from '@/components/blockQuote.vue';
   import Item from '@/components/Item.vue';
   import { createClient } from '~/plugins/contentful.js'
   const client = createClient()
@@ -52,7 +53,6 @@
          }
     },
       components: {
-        blockQuote,
         Item
       },
 

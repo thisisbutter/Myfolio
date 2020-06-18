@@ -23,7 +23,5 @@
     "vue-magic-grid": "0.0.4",
     "vue-masonry-wall": "^0.2.5"
   },
-  "devDependencies": {
-    "@nuxtjs/vuetify": "^1.0.0"
-  }
+  "devDependencies": {}
 }

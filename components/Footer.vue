@@ -1,13 +1,11 @@
 <template>
     <div>
-    <v-footer
-      absolute
-      app
-      class="footer"
+    <footer
+     class="footer"
     > 
       <!-- <p class="contact_me">Contact from here &#9993</p> -->
       <p class="alllights">&copy; {{ new Date().getFullYear() }} ButtersLog</p>
-    </v-footer>
+    </footer>
         
     </div>
 </template>
