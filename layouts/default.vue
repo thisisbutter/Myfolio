@@ -52,13 +52,14 @@ export default {
     background-color: rgb(241, 241, 241);
     /* background-color: rgb(240, 236, 230); */
   }
-   div.container {
-   max-width: 1500px; 
+   div.contents_main {
    margin-bottom: 100px;
  }
  .wrapper {
    height: auto;
+   /* max-width: 1500px;  */
    padding-bottom: 100px;
+   margin: 0 auto;
  }
 
 /* 全体フォント */

@@ -1,7 +1,9 @@
 <template>
 
  <div class="contents_main">
- <no-ssr>
+
+ <!-- <no-ssr> -->
+   <client-only>
     <magic-grid
      maxColWidth=360
     >
@@ -21,7 +23,8 @@
       @infinite="infiniteHandler">
       <span slot="no-more"></span>
     </infinite-loading>
- </no-ssr>
+ <!-- </no-ssr> -->
+   </client-only>
  </div>
 
 </template>
