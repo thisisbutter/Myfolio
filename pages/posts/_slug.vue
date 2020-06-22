@@ -30,7 +30,7 @@
           >
 
         <section class="the-content">
-            <p v-html="$md.render(works.fields.content)">
+            <p v-html="$md.render(works.fields.content)" class="p_content">
             </p>
         </section>
 
@@ -111,8 +111,10 @@ export default {
 .post-img {
     margin: 0 auto;
     width: 100%;
-    max-width: 980px;
-    max-height: 460px;
+    /* min-width: 980px; */
+    /* height: auto; */
+    object-fit: contain;
+    max-height: 480px;
     display: block;
     
 }
@@ -141,17 +143,21 @@ export default {
     min-height: 300px;
     margin-bottom: 100px;
 }
+.p_content {
+  letter-spacing: 0.05em;
+  line-height: 32px;
+}
 
-@media screen and (min-width:300px) {
+@media screen and (min-width:200px) {
+  .the-content {
+  width: 96%;
+ } 
+}
+@media screen and (min-width:800px) {
   .the-content {
   width: 80%;
  } 
 }
-/* @media screen and (min-width:800px) {
-  .the-content {
-  width: 80%;
- } 
-} */
 @media screen and (min-width:1024px) {
  .the-content {
   width: 720px;
