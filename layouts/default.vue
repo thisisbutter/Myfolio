@@ -2,21 +2,14 @@
   <div>
       <div class="nav_container">
         <nav class="nav_list">
-          <!-- <v-text-field
-            label="Search"
-            v-model="keyword" 
-            @keypress.enter="$router.push('/search/' + keyword)"
-            class="d-none d-lg-block"
-            >
-          </v-text-field> -->
-        <ul>
-          <li><nuxt-link to="/" class="navs">Home</nuxt-link></li>
-          <li><nuxt-link to="/category/PaEXgNdpMzTwxXsEYjWHM" class="navs">Blog</nuxt-link></li>
-          <li><nuxt-link to="/category/Ae7gzW3aql6i1aNb6ls1w" class="navs">Work</nuxt-link></li>
-          <li><nuxt-link to="/category/7GUtBQJAY7mwGUXhV7uWHF" class="navs">About</nuxt-link></li>
-          <input type="text" name="search" placeholder="Search.." class="search" v-model="keyword" 
-            @keypress.enter="$router.push('/search/' + keyword)">
-        </ul>
+          <ul>
+            <li><a href="/" class="navs">Home</a></li>
+            <li><nuxt-link to="/category/PaEXgNdpMzTwxXsEYjWHM" class="navs">Blog</nuxt-link></li>
+            <li><nuxt-link to="/category/Ae7gzW3aql6i1aNb6ls1w" class="navs">Work</nuxt-link></li>
+            <li><nuxt-link to="/category/7GUtBQJAY7mwGUXhV7uWHF" class="navs">About</nuxt-link></li>
+            <input type="text" name="search" placeholder="Search.." class="search" v-model="keyword" 
+              @keypress.enter="$router.push('/search/' + keyword)">
+          </ul>
         </nav>
         
       </div>
@@ -56,7 +49,8 @@ export default {
   body {
     margin: 0;
     padding: 0;
-    background-color: rgb(240, 236, 230);
+    background-color: rgb(241, 241, 241);
+    /* background-color: rgb(240, 236, 230); */
   }
    div.container {
    max-width: 1500px; 
@@ -100,11 +94,12 @@ img {
   color: black;
 }
 .nav_list ul li a:hover {
-  color: rgb(57, 80, 62);
+  /* color: rgb(57, 80, 62); */
+  color: rgb(113, 190, 190);
 }
 .search {
   border: none;
-  background-color: rgb(240, 236, 230);
+  background-color: rgb(241, 241, 241);
   border-bottom: solid 0.6px gray;
   padding: 5px 10px 5px;
   font-size: 12px;

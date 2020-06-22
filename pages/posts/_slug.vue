@@ -10,7 +10,7 @@
               <nuxt-link :to=" '/category/' + works.fields.category.sys.id ">
                  {{ works.fields.category.fields.name }}
               </nuxt-link>
-              <!-- <v-breadcrumbs :items="items"></v-breadcrumbs> -->
+              
             
                <button
                 v-for="tag in works.fields.tag" :key="tag.sys.id" 
@@ -24,15 +24,10 @@
             <h1 class="single-post-title">{{  works.fields.title }}</h1>
             <h2 class="single-post-subtitle">{{ works.fields.subtitle }}</h2>
         </div>
-
-    <img 
-    class="post-img"
-    v-bind:src="works.fields.image.fields.file.url"
-    >
-    
-    <!-- max-height="540px" -->
-     
-   
+        <img 
+          class="post-img"
+          v-bind:src="works.fields.image.fields.file.url"
+          >
 
         <section class="the-content">
             <p v-html="$md.render(works.fields.content)">
@@ -59,11 +54,6 @@ export default {
               disabled: false,
               href: '/',
             },
-            // {
-            //   text: 'this.fields.category.fields.name',
-            //   disabled: false,
-            //   href: "'/category/' + this.fields.category.sys.id'"
-            // },
           ],
         }),
 
@@ -81,21 +71,9 @@ export default {
           console.log(works.items[0])
         }).catch(console.error)
       },
-    //   mounted() {
-    //     Prism.highlightAll(),
-    //     console.log(this.$vuetify.breakpoint)
-    //   },
-    //   computed: {
-    //   imageHeight () {
-    //     switch (this.$vuetify.breakpoint.name) {
-    //       case 'xs': return '220px'
-    //       case 'sm': return '400px'
-    //       case 'md': return '500px'
-    //       case 'lg': return '600px'
-    //       case 'xl': return '800px'
-    //     }
-    //   }  
-    // }
+      mounted() {
+        Prism.highlightAll()
+      },
 }
 </script>>
 

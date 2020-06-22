@@ -42,7 +42,8 @@
     font-weight: 200;
     text-align: center;
     font-family: 'Lato', sans-serif; 
-    color: gray
+    color: rgb(100, 209, 200);
+    /* color: rgb(112, 212, 212); */
   }
 
  .bee-img {

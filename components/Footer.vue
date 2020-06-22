@@ -12,9 +12,11 @@
 
 <style scoped>
 .footer {
- background-color: rgb(49, 77, 73);
- /* background-color: #879e87; */
- color: whitesmoke;
+  /* background-color: #879e87; */
+ /* background-color: rgb(49, 77, 73); */
+ background-color: rgb(197, 216, 216);
+ font-family: 'Lato', sans-serif; 
+ color: rgb(51, 34, 16);
  min-height: 100px;
  display: flex;
  flex-direction: column;
