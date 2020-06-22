@@ -1,9 +1,9 @@
 <template>
 
- <div>
-
+ <div class="contents_main">
+ <no-ssr>
     <magic-grid
-     maxColWidth= 360
+     maxColWidth=360
     >
       <Item 
         v-for="work in works" 
@@ -21,7 +21,7 @@
       @infinite="infiniteHandler">
       <span slot="no-more"></span>
     </infinite-loading>
-
+ </no-ssr>
  </div>
 
 </template>
