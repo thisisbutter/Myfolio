@@ -51,7 +51,6 @@ export default {
   border: none;
   border-radius: 13px;
   box-shadow: 0 0 12px gainsboro;
-  margin: 20px 20px;
   background-color: white;
 }
 .card_title {

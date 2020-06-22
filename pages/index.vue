@@ -1,9 +1,9 @@
 <template>
 
  <div class="contents_main">
-
+<client-only>
  <!-- <no-ssr> -->
-   <client-only>
+   
     <magic-grid
      maxColWidth=360
     >
