@@ -50,7 +50,9 @@ export default {
     margin: 0;
     padding: 0;
     background-color: rgb(241, 241, 241);
-    /* background-color: rgb(240, 236, 230); */
+    /* font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; */
+    /* font-family: 'Poppins', YuGothic, 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; */
+    font-family: "Poppins", "游ゴシック", "YuGothic", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
   }
    div.contents_main {
    margin-bottom: 100px;
@@ -63,9 +65,10 @@ export default {
  }
 
 /* 全体フォント */
-#app {
-  font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
-  } 
+ /* { */
+  /* font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; */
+  /* font-family: 'Poppins', YuGothic, 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  }  */
 
 /* 全体画像サイズ */
 img {

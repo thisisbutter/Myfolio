@@ -142,11 +142,16 @@ export default {
     margin-bottom: 100px;
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width:300px) {
   .the-content {
   width: 80%;
  } 
 }
+/* @media screen and (min-width:800px) {
+  .the-content {
+  width: 80%;
+ } 
+} */
 @media screen and (min-width:1024px) {
  .the-content {
   width: 720px;
