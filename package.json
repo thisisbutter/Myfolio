@@ -23,5 +23,7 @@
     "vue-magic-grid": "0.0.4",
     "vue-masonry-wall": "^0.2.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nuxt-svg-loader": "^1.2.0"
+  }
 }

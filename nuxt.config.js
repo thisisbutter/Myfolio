@@ -79,7 +79,7 @@ export default {
   ],
   webfontloader: {
     google: {
-      families: ['Black Han Sans','Roboto','Lato']
+      families: ['Black Han Sans','Roboto','Lato','Nothing You Could Do']
     }
   },
   /*
@@ -89,7 +89,8 @@ export default {
     '@nuxtjs/markdownit',
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    'nuxt-svg-loader'
   ],
   markdownit: { 
     html: true,

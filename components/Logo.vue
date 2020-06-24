@@ -2,19 +2,24 @@
  
 
   <div class="title_container">
-    <nuxt-link to="/">
-     <h1 id="main_title" class="display-2">Butters Log</h1>
-    </nuxt-link>
-     <h2 class="sub_title">Frontend Web Developer</h2>
 
-    <div class="bee-img">
-    <img src="/bumbleBee.png"/>
-    </div>
-    
-   </div>
-
-
+   <a href="/" id="main_title">
+    <buttersLogo/>
+   </a>
+   <img src="/bumbleBee.png" class="bee-img">
+   <h1 class="sub_title">Frontend Web Developer</h1>
+  </div>
 </template>
+
+<script>
+import buttersLogo from '@/static/butterslogo.svg'
+
+export default {
+  components: {
+    buttersLogo
+  }
+}
+</script>
 
 
 <style scoped>
@@ -30,39 +35,34 @@
   margin-bottom: 20px;
 }
 #main_title {
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: 46px;
+    height: 130px;
+    width: 350px;
     text-align: center;
-    color: rgb(51, 34, 16);
-    margin-top: 100px;
-    margin-bottom: 0px;
+    margin-top: 80px;
   }
   .sub_title {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 200;
     text-align: center;
-    font-family: 'Lato', sans-serif; 
+    font-family: 'Nothing You Could Do', cursive;
+    /* font-family: 'Lato', sans-serif;  */
     color: rgb(72, 187, 178);
-    /* color: rgb(112, 212, 212); */
+    margin-bottom: 40px;
   }
-
- .bee-img {
+/* 
+.bee-img {
    animation: bee-img linear 5s infinite;
    transform-origin: center -30px 0;
- }
- @keyframes bee-img {
+ } */
+ /*@keyframes bee-img {
     0% { transform: rotate(0deg); }
     25% { transform: rotate(5deg); }
     50% { transform: rotate(0deg); }
     75% { transform: rotate(-5deg); }
     100% { transform: rotate(0deg); }
+}*/
+img {
+    width: 76px;
+    margin-bottom: 18px;
 }
-  .bee-img img {
-    width: 80px;
-    margin-top: 60px; 
-  }
-  .quote {
-    text-align: center;
-    margin-bottom: 60px; 
-  }
 </style>
