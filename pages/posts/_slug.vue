@@ -10,12 +10,12 @@
               <nuxt-link :to=" '/category/' + works.fields.category.sys.id ">
                  {{ works.fields.category.fields.name }}
               </nuxt-link>
+              </p>
               
             
                <button
                 v-for="tag in works.fields.tag" :key="tag.sys.id" 
-                text
-                color="deep-orange lighten-2"
+                class="tag_btn"
                 @click="$router.push('/tag/'+tag.sys.id)"
               >
                 {{ tag.fields.name }}
@@ -78,18 +78,34 @@ export default {
 </script>>
 
 <style scoped>
-/* パンクずリスト
+/* パンクずリスト */
 .bread_crum {
-  font-size: 17px;
-  /* color: #2f4f4f */
-/* } */
-/* .bread_crum a {
+  font-size: 15px;
+  color: rgb(51, 34, 16);
+ } 
+.bread_crum a {
   text-decoration: none;
-  color: rgb(36, 92, 83);
+  color: rgb(51, 34, 16);
 }
 .bread_crum a:hover {
   color: darkgoldenrod
-}  */
+}  
+
+.tag_btn {
+  padding: 6px 12px 6px;
+  /* padding: 10px 15px 10px; */
+  background-color: rgb(241, 241, 241);
+  font-size: 13px;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  color: #CB8333;
+  text-transform: uppercase;
+  border: none;
+}
+.tag_btn:hover {
+  cursor: pointer;
+  color: rgb(93, 168, 162);
+}
 
 /* タイトルコンテナ */
 .post-container {
@@ -130,10 +146,11 @@ export default {
     line-height: 68px;
 }
 .single-post-subtitle {
-    font-size: 16px;
-    margin-top: 10px;
+    font-size: 15px;
+    margin: 14px 0px 26px;
     font-weight: 300;
     font-family: "Lato, sans-serif"; 
+    color: gray;
 }
 
 /* コンテンツ */
@@ -146,6 +163,8 @@ export default {
 .p_content {
   letter-spacing: 0.05em;
   line-height: 32px;
+  font-size: 16px;
+  margin-top: 46px;
 }
 
 @media screen and (min-width:200px) {
