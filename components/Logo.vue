@@ -49,20 +49,19 @@ export default {
     color: rgb(72, 187, 178);
     margin-bottom: 40px;
   }
-/* 
-.bee-img {
-   animation: bee-img linear 5s infinite;
-   transform-origin: center -30px 0;
- } */
- /*@keyframes bee-img {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
-}*/
+
 img {
     width: 76px;
     margin-bottom: 18px;
+}
+
+/* レスポンシブ */
+@media screen and (max-width:980px) {
+  .title_container {
+    height: 310px;
+  }
+   .nav_list {
+   display: none;
+ }
 }
 </style>

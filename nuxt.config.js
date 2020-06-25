@@ -60,8 +60,7 @@ export default {
   ** Global CSS
   */
   css: [
-  //   '@fortawesome/fontawesome-svg-core/styles.css'
-       
+    '~/assets/style/reset.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -79,7 +78,7 @@ export default {
   ],
   webfontloader: {
     google: {
-      families: ['Black Han Sans','Roboto','Lato','Nothing You Could Do']
+      families: ['Black Han Sans','Roboto','Lato','Nothing You Could Do','Poppins']
     }
   },
   /*
