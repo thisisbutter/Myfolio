@@ -188,8 +188,13 @@ export default {
 
 @media screen and (min-width:200px) {
   .the-content {
-  width: 96%;
+  width: 92%;
  } 
+  .p_content {
+  letter-spacing: 0.05em;
+  line-height: 28px;
+  font-size: 14px;
+}
 }
 @media screen and (min-width:800px) {
   .the-content {
@@ -200,6 +205,13 @@ export default {
  .the-content {
   width: 720px;
  } 
+ .p_content {
+  letter-spacing: 0.05em;
+  line-height: 32px;
+  font-size: 16px;
+  margin-top: 46px;
+  margin-bottom: 50px;
+}
 }
 
 
