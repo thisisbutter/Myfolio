@@ -32,6 +32,9 @@
         <section class="the-content">
             <p v-html="$md.render(works.fields.content)" class="p_content">
             </p>
+
+           <p class="back_btn" @click="backTo">&#9666;Back</p>
+
         </section>
 
     </div>
@@ -74,6 +77,11 @@ export default {
       mounted() {
         Prism.highlightAll()
       },
+      methods: {
+        backTo : function () {
+          this.$router.back();
+        }
+      }
 }
 </script>>
 
@@ -165,6 +173,17 @@ export default {
   line-height: 32px;
   font-size: 16px;
   margin-top: 46px;
+  margin-bottom: 50px;
+}
+
+/* 戻るボタン */
+.back_btn {
+  width: 100px;
+  cursor: pointer;
+  color: rgb(146, 139, 139);
+}
+.back_btn:hover {
+  color: rgb(192, 160, 73)
 }
 
 @media screen and (min-width:200px) {

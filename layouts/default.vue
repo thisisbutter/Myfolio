@@ -78,12 +78,16 @@ export default {
   }
    div.contents_main {
    margin-bottom: 100px;
+   
  }
  .wrapper {
    height: auto;
    /* max-width: 1500px;  */
    padding-bottom: 100px;
    margin: 0 auto;
+   width: 100%;
+   overflow: hidden;
+   
  }
  /* ============================= */
  /* ナビゲーションドロワー */
@@ -92,6 +96,7 @@ export default {
   position: relative;
   height: 40px;
   display: none;
+  width: 80px;
 }
 
 /*チェックボックス等は非表示に*/
@@ -185,6 +190,8 @@ export default {
     text-decoration: none;
     cursor: pointer;
     color: grey;
+    display:block;
+    width:100%;
  }
  .humb_nav ul li a:hover {
    color: rgb(109, 109, 8)
@@ -250,7 +257,9 @@ input:focus {
     top: 60px;
     position: relative;
     height: 40px;
+    
  }
+ 
 }
 
 
