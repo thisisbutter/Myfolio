@@ -63,13 +63,13 @@ export default {
 }
 
 .card_subtitle {
-  font-size: 17px;
+  font-size: 15px;
   color: gray;
   font-weight: 200;
   margin-left: 15px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   font-family: 'Lato', sans-serif;
-  padding-top: 14px;
+  padding-top: 18px;
 }
 .card_img {
   width: 100%;
@@ -84,7 +84,7 @@ export default {
 
 /* カードイメージ下コンテンツのstyle */
 .under-image-content-space {
-    min-height: 110px;
+    min-height: 126px;
 }
 .under-image-content-space a {
   text-decoration: none;
@@ -98,10 +98,6 @@ export default {
 }
 
 /* カードのボタンstyle */
-.tag_btn {
-  margin-top: 10px;
-}
-
 button.card_btn {
   padding: 10px 15px 10px;
   font-size: 13px;

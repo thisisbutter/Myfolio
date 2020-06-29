@@ -3,7 +3,7 @@
       <div class="nav_container">
         <nav class="nav_list">
           <ul>
-            <li><a href="/" class="navs">Home</a></li>
+            <li><nuxt-link to="/" class="navs">Home</nuxt-link></li>
             <li><nuxt-link to="/category/PaEXgNdpMzTwxXsEYjWHM" class="navs">Blog</nuxt-link></li>
             <li><nuxt-link to="/category/Ae7gzW3aql6i1aNb6ls1w" class="navs">Works</nuxt-link></li>
             <li><nuxt-link to="/category/7GUtBQJAY7mwGUXhV7uWHF" class="navs">About</nuxt-link></li>
@@ -22,7 +22,7 @@
           <div id="nav-content">
              <nav class="humb_nav">
               <ul>
-                <li><a href="/" class="navs" @click.native="humbClick">Home</a></li>
+                <li><nuxt-link to="/" class="navs" @click.native="humbClick">Home</nuxt-link></li>
                 <li><nuxt-link to="/category/PaEXgNdpMzTwxXsEYjWHM" class="navs" @click.native="humbClick">Blog</nuxt-link></li>
                 <li><nuxt-link to="/category/Ae7gzW3aql6i1aNb6ls1w" class="navs" @click.native="humbClick">Works</nuxt-link></li>
                 <li><nuxt-link to="/category/7GUtBQJAY7mwGUXhV7uWHF" class="navs" @click.native="humbClick">About</nuxt-link></li>
