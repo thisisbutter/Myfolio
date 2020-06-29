@@ -22,10 +22,10 @@
           <div id="nav-content">
              <nav class="humb_nav">
               <ul>
-                <li><a href="/" class="navs">Home</a></li>
-                <li><nuxt-link to="/category/PaEXgNdpMzTwxXsEYjWHM" class="navs">Blog</nuxt-link></li>
-                <li><nuxt-link to="/category/Ae7gzW3aql6i1aNb6ls1w" class="navs">Works</nuxt-link></li>
-                <li><nuxt-link to="/category/7GUtBQJAY7mwGUXhV7uWHF" class="navs">About</nuxt-link></li>
+                <li><a href="/" class="navs" @click.native="humbClick">Home</a></li>
+                <li><nuxt-link to="/category/PaEXgNdpMzTwxXsEYjWHM" class="navs" @click.native="humbClick">Blog</nuxt-link></li>
+                <li><nuxt-link to="/category/Ae7gzW3aql6i1aNb6ls1w" class="navs" @click.native="humbClick">Works</nuxt-link></li>
+                <li><nuxt-link to="/category/7GUtBQJAY7mwGUXhV7uWHF" class="navs" @click.native="humbClick">About</nuxt-link></li>
                 <!-- <input type="text" name="search" placeholder="Search.." class="search" v-model="keyword" 
                   @keypress.enter="$router.push('/search/' + keyword)"> -->
               </ul>
@@ -56,6 +56,11 @@ export default {
         keyword: ' '
       }
   },
+  methods:{
+    humbClick : function(){
+      document.getElementById("nav-input").checked = false;
+    }
+  }
   
 }
 </script>
@@ -141,8 +146,8 @@ export default {
   top: 0;
   left: 0;
   z-index: 9999;/*最前面に*/
-  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
-  max-width: 420px;/*最大幅（調整してください）*/
+  width: 90%;/*右側に隙間を作る*/
+  max-width: 340px;/*最大幅*/
   height: 100%;
   background: rgb(231,214,195);/*背景色*/
   opacity: 0.95;
